@@ -295,7 +295,7 @@ class Metasploit3 < Msf::Post
 
     # Display results to user
     if check == 1
-      print_good("Successfully added \"#{dbuser}\" to sysadmin role")
+      print_good("Successfully added \"#{dbuser}\" to sysadmin role on \"#{sysinfo['Computer']}\"")
       return 1
     else
       # Fail
