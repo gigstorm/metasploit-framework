@@ -295,11 +295,11 @@ class Metasploit3 < Msf::Post
 
     # Display results to user
     if check == 1
-      print_good("Successfully added \"#{dbuser}\" to sysadmin role")
+      print_good("Successfully added \"#{dbuser}\" to sysadmin role on \"#{sysinfo['Computer']}\"")
       return 1
     else
       # Fail
-      print_error("Unabled to add #{dbuser} to sysadmin role")
+      print_error("Unabled to add #{dbuser} to sysadmin role on \"#{sysinfo['Computer']}\"")
       print_error("Database Error:\n\n #{add_sysadmin_result}")
       return 0
     end
@@ -352,11 +352,11 @@ class Metasploit3 < Msf::Post
 
     # Display result
     if check == 0
-      print_good("Successfully removed login \"#{dbuser}\"")
+      print_good("Successfully removed login \"#{dbuser}\" on \"#{sysinfo['Computer']}\"")
       return 1
     else
       # Fail
-      print_error("Unabled to remove login #{dbuser}")
+      print_error("Unabled to remove login #{dbuser} on \"#{sysinfo['Computer']}\"")
       print_error("Database Error:\n\n #{remove_login_result}")
       return 0
     end
